@@ -1,0 +1,12 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node.js / npm
+node_modules/
+package-lock.json
+npm-debug.log
+
+# VS Code
+.vscode/

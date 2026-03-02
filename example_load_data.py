@@ -2,14 +2,14 @@
 import pmxt
 
 def main():
-    # Example: fetch Polymarket markets about Bitcoin
     api = pmxt.Polymarket()
     markets = api.fetch_markets(query="Bitcoin price")
 
     if markets:
         print("Found markets:")
-        for m in markets[:3]:  # just show top 3
-            print(f"{m.title} - Outcomes: {[o.title for o in m.outcomes]}")
+        for m in markets[:3]:  # show top 3
+            outcome_labels = [o.label for o in m.outcomes]
+            print(f"Outcomes: {outcome_labels}")
     else:
         print("No markets found")
 
